@@ -11,7 +11,7 @@ import PINRemoteImage
 
 class ViewController: UIViewController{
     var allData = [restaurantSearch]()
-     var dataArray = [Restaurant]()
+    var dataArray = [Restaurant]()
     
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
@@ -44,18 +44,15 @@ class ViewController: UIViewController{
         }
         
         task.resume()
-        
-
     }
-
 
 }
 extension ViewController: UITableViewDelegate,UITableViewDataSource{
-
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArray.count
     }
-
+    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         print(cell)
@@ -67,7 +64,7 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
         return cell
     }
     
-
-
+    
+    
 }
 
